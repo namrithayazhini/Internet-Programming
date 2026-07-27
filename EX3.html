@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soundwave Emporium</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#fff8e7;  
+    color:#5d4037;              
+    margin:0;
+}
+h1{
+    color:#8b4513;              
+    text-align:center;
+    font-size:40px;
+}
+h2{
+    color:#d2691e;              
+    text-align:center;
+}
+a{
+    text-decoration:none;
+    color:#a0522d;              
+    font-weight:bold;
+}
+a:hover{
+    color:#ff8c00;              
+}
+table{
+    border-collapse:collapse;
+    width:90%;
+    margin:auto;
+}
+td{
+    padding:10px;
+}
+img{
+    border-radius:15px;
+    box-shadow:0 3px 8px #8b7355;
+}
+button,
+input[type="submit"],
+input[type="reset"]{
+
+    background:#d2691e;        
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+
+    background:#8b4513;        
+}
+footer{
+
+    background:#6f4e37;          
+    color:#fff8dc;
+    padding:15px;
+    text-align:center;
+}
+nav{
+    background:#ffe0b2;
+    padding:15px;
+    border-radius:10px;
+}
+
+
+nav a{
+    color:#8b4513;
+    font-size:18px;
+}
+
+
+nav a:hover{
+    color:#d2691e;
+    background:#fff3e0;
+    padding:8px;
+    border-radius:5px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1 style="background:#c2957f;padding:20px;border-radius:10px;">
+ Soundwave Emporium
+</h1>
+</header>
+<hr>
+<nav>
+<table width="100%">
+<tr align="center">
+
+<td>
+<a href="#home">Home</a>
+</td>
+
+<td>
+<a href="#categories">Categories</a>
+</td>
+
+<td>
+<a href="#flavours">Instuments</a>
+</td>
+
+<td>
+<a href="#video">Videos</a>
+</td>
+
+<td>
+<a href="#order">Order</a>
+</td>
+
+<td>
+<a href="#location">Find Us</a>
+</td>
+
+<td>
+<a href="#contact">Contact</a>
+</td>
+
+</tr>
+</table>
+</nav>
+<hr>
+<section id="home">
+<h2>Welcome to Soundwave Emporium </h2>
+<p align="center">
+At Soundwave Emporium, we bridge the gap between classic artistry and
+modern sound. Step inside to explore a premium selection of fine instruments
+high-end gear, and expert accessories tailored for every genre and skill
+level. Find your vibe, test your tone, and let’s make some noise together.</p>
+</section>
+<hr>
+<section id="categories">
+<h2>In Categories musical instruments</h2>
+<center>
+<img src="full1.jpg"
+usemap="#Guitar"
+width="500"
+height="220"
+alt=" Categories">
+</center>
+<map name="Guitar">
+<area shape="rect"
+coords="0,0,160,220"
+href="#Musical"
+alt="Drum">
+<area shape="rect"
+coords="160,0,330,220"
+href="#Musical"
+alt="Piano">
+<area shape="rect"
+coords="330,0,500,220"
+href="#Musical"
+alt="Violin">
+</map>
+</section>
+<hr>
+<section id="Musical">
+<h2>Our Popular </h2>
+<table border="1" cellpadding="20">
+<tr>
+<td align="center">
+<img src="g1.jpg"
+width="120"
+height="120">
+<br>
+<b>Black Guitar</b>
+<br>
+₹3,000
+</td>
+<td align="center">
+<img src="d1.jpg"
+width="120"
+height="120">
+<br>
+<b>Dark Blue Drums</b>
+<br>
+₹15,000
+</td>
+<td align="center">
+<img src="v1.jpg"
+width="120"
+height="120">
+<br>
+<b>Violin</b>
+<br>
+₹6,000
+</td>
+</tr>
+</table>
+</section>
+<hr>
+<section id="video">
+<h2> Video</h2>
+<center>
+<video width="500"
+height="280"
+controls>
+<source src="mm.mp4"
+type="video/mp4">
+Your browser does not support video.
+</video>
+</center>
+</section>
+<hr>
+<section>
+<h2> Guitar music</h2>
+<center>
+<audio controls>
+<source src="mma.mp3"
+type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+</center>
+</section>
+<hr>
+<section id="order">
+<h2>Order Your Cake</h2>
+<form>
+<table cellpadding="8">
+<tr>
+<td>Name</td>
+<td>
+<input type="text" required>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>
+<input type="email" required>
+</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>
+<input type="tel">
+</td>
+</tr>
+<tr>
+<td>Select musical instruments</td>
+<td>
+<select>
+<option>guitar </option>
+<option>piano</option>
+<option>drum</option>
+<option>flute</option>
+<option>violin </option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>
+<input type="number"
+min="1"
+max="10">
+</td>
+</tr>
+<tr>
+<td>Delivery Date</td>
+<td>
+<input type="date">
+</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>
+<textarea rows="4"
+cols="25"></textarea>
+</td>
+</tr>
+<tr>
+<td>Payment Method</td>
+<td>
+<input type="radio"
+name="payment">
+Cash
+<input type="radio"
+name="payment">
+UPI
+<input type="radio"
+name="payment">
+Card
+</td>
+</tr>
+<tr>
+<td colspan="2"
+align="center">
+<input type="submit"
+value="Place Order">
+<input type="reset"
+value="Clear">
+</td>
+</tr>
+</table>
+</form>
+</section>
+<hr>
+<section id="location">
+<h2>Find OurSoundwave Emporium</h2>
+<center>
+<button onclick="getLocation()">
+Get Shop Location
+</button>
+<p id="demo"></p>
+</center>
+</section>
+<hr>
+<section id="contact">
+<h2>Contact Us</h2>
+<center>
+<p>
+Email : support@soundwaveemporium.com
+</p>
+<p>
+Phone : +91 9846327221
+</p>
+<p>
+Address : Madurai, Tamil Nadu
+</p>
+</center>
+</section>
+<hr>
+<footer>
+<table width="100%">
+<tr>
+<td align="center">
+<b>
+&copy;  Soundwave Emporium
+</b>
+</td>
+</tr>
+</table>
+</footer>
+<script>
+var x = document.getElementById("demo");
+function getLocation(){
+if(navigator.geolocation){
+navigator.geolocation.getCurrentPosition(showPosition);
+}
+else{
+x.innerHTML =
+"Geolocation is not supported";
+}
+}
+function showPosition(position){
+x.innerHTML =
+"Latitude : "
++
+position.coords.latitude
++
+"<br>Longitude : "
++
+position.coords.longitude;
+}
+</script>
+</body>
