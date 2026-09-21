@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Namritha Yazhini | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5faff;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0879d1;
+}
+
+.logo span {
+    color: #172033;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    margin-left: 22px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0879d1;
+}
+
+.menu {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ================= COMMON ================= */
+
+section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-size: 35px;
+    color: #172033;
+}
+
+.title h2 span {
+    color: #0879d1;
+}
+
+.title p {
+    color: #718096;
+    margin-top: 3px;
+}
+
+/* ================= HOME ================= */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding-top: 90px;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content small {
+    color: #0879d1;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.home-content h1 {
+    font-size: 58px;
+    margin: 7px 0;
+    color: #172033;
+    line-height: 1.15;
+}
+
+.home-content h1 span {
+    color: #0879d1;
+}
+
+.role {
+    color: #0879d1;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.home-content > p {
+    max-width: 650px;
+    color: #617086;
+    font-size: 16px;
+}
+
+.buttons {
+    margin-top: 23px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 22px;
+    margin-right: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #0879d1;
+    color: white;
+}
+
+.primary:hover {
+    background: #055fa5;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 2px solid #0879d1;
+    color: #0879d1;
+}
+
+.secondary:hover {
+    background: #0879d1;
+    color: white;
+}
+
+.profile-card {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #dff3ff, #ffffff);
+    border: 7px solid white;
+    box-shadow: 0 12px 35px rgba(8,121,209,0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card div {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: #0879d1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+/* ================= ABOUT ================= */
+
+.about-box {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.05);
+}
+
+.about-box p {
+    color: #5d6b7d;
+    font-size: 16px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    background: white;
+    padding: 23px;
+    border-radius: 14px;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.05);
+}
+
+.skill-box h3 {
+    color: #0879d1;
+    margin-bottom: 13px;
+}
+
+.skill {
+    display: inline-block;
+    padding: 7px 13px;
+    margin: 4px;
+    border-radius: 18px;
+    background: #e9f6ff;
+    color: #0879d1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ================= EDUCATION ================= */
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.edu-card {
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.05);
+    border-top: 4px solid #0879d1;
+}
+
+.edu-card h3 {
+    color: #0879d1;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.edu-card p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(8,121,209,0.13);
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    background: #e9f6ff;
+    color: #0879d1;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+.project-card h3 {
+    color: #172033;
+    margin-bottom: 7px;
+}
+
+.project-card p {
+    color: #68778b;
+    font-size: 15px;
+}
+
+.tech {
+    margin-top: 13px;
+}
+
+.tech span {
+    display: inline-block;
+    background: #f0f3f7;
+    color: #526176;
+    padding: 4px 9px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* ================= INTERNSHIP ================= */
+
+.timeline {
+    border-left: 3px solid #0879d1;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    background: white;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #0879d1;
+    border-radius: 50%;
+    left: -33px;
+    top: 27px;
+}
+
+.timeline-item h3 {
+    color: #0879d1;
+}
+
+.timeline-item .date {
+    color: #718096;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.timeline-item p {
+    color: #68778b;
+    font-size: 15px;
+}
+
+/* ================= CERTIFICATES ================= */
+
+.certificate-list,
+.achievement-list {
+    display: grid;
+    gap: 12px;
+}
+
+.certificate,
+.achievement {
+    background: white;
+    padding: 17px 22px;
+    border-radius: 11px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.certificate h3 {
+    color: #0879d1;
+    font-size: 17px;
+}
+
+.certificate p {
+    color: #68778b;
+    font-size: 14px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box {
+    background: #0879d1;
+    color: white;
+    border-radius: 17px;
+    padding: 35px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    margin: 5px;
+}
+
+.socials {
+    margin-top: 18px;
+}
+
+.socials a {
+    display: inline-block;
+    text-decoration: none;
+    background: white;
+    color: #0879d1;
+    padding: 9px 15px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #172033;
+    color: white;
+    font-size: 14px;
+}
+
+/* ================= TOP BUTTON ================= */
+
+#topBtn {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #0879d1;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 800px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        min-height: auto;
+        padding-top: 105px;
+        padding-bottom: 45px;
+    }
+
+    .home-content h1 {
+        font-size: 42px;
+    }
+
+    .home-content > p {
+        margin: auto;
+    }
+
+    .profile-card {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-card div {
+        width: 160px;
+        height: 160px;
+        font-size: 42px;
+    }
+
+    .skills-container,
+    .projects,
+    .education {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .title h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            NY<span>.</span>
+        </div>
+
+        <div class="menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#internship">Internship</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="home-content">
+
+        <small>Hello, I'm</small>
+
+        <h1>
+            Namritha <span>Yazhini</span>
+        </h1>
+
+        <p class="role">
+            UI/UX Designer &nbsp; | &nbsp; Front-End Developer
+        </p>
+
+        <p>
+            Computer Science Engineering student with a strong interest
+            in UI/UX design and front-end development. I enjoy creating
+            user-friendly designs and building simple, effective web
+            applications.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn primary">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <div>
+            NY
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="title">
+        <h2>About <span>Me</span></h2>
+        <p>Get to know me</p>
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            I am Namritha Yazhini S, a Computer Science Engineering student
+            at Kamaraj College of Engineering & Technology. I have a strong
+            interest in UI/UX design and front-end development.
+        </p>
+
+        <br>
+
+        <p>
+            I am skilled in HTML, CSS, JavaScript, Figma and Flutter.
+            I enjoy designing user-friendly interfaces, creating prototypes
+            and developing simple and effective applications.
+        </p>
+
+        <br>
+
+        <p>
+            I am a quick learner with a passion for learning new technologies
+            and improving my technical and creative skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="title">
+        <h2>My <span>Skills</span></h2>
+        <p>Technologies and abilities</p>
+    </div>
+
+
+    <div class="skills-container">
+
+        <div class="skill-box">
+
+            <h3>Programming Languages</h3>
+
+            <span class="skill">C</span>
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+
+        </div>
+
+
+        <div class="skill-box">
+
+            <h3>Web & Mobile Development</h3>
+
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Flutter</span>
+
+        </div>
+
+
+        <div class="skill-box">
+
+            <h3>UI/UX Design</h3>
+
+            <span class="skill">Figma</span>
+            <span class="skill">Canva</span>
+            <span class="skill">Wireframing</span>
+            <span class="skill">Prototyping</span>
+            <span class="skill">User Flow</span>
+            <span class="skill">Responsive Design</span>
+
+        </div>
+
+
+        <div class="skill-box">
+
+            <h3>Soft Skills</h3>
+
+            <span class="skill">Time Management</span>
+            <span class="skill">Adaptability</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Team Collaboration</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Design Thinking</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="title">
+        <h2>My <span>Education</span></h2>
+        <p>Academic background</p>
+    </div>
+
+
+    <div class="education">
+
+        <div class="edu-card">
+
+            <h3>B.E. Computer Science & Engineering</h3>
+
+            <p>
+                Kamaraj College of Engineering & Technology
+            </p>
+
+            <p>
+                <strong>2024 - 2028</strong>
+            </p>
+
+            <p>
+                CGPA: 7.68
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <h3>HSC</h3>
+
+            <p>
+                Indira Gandhi Memorial Matriculation
+                Higher Secondary School
+            </p>
+
+            <p>
+                <strong>2024</strong>
+            </p>
+
+            <p>
+                Percentage: 66.8%
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <h3>SSLC</h3>
+
+            <p>
+                Amrita Vidyalayam Matriculation
+                Higher Secondary School
+            </p>
+
+            <p>
+                <strong>2022</strong>
+            </p>
+
+            <p>
+                Percentage: 75.6%
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="title">
+        <h2>My <span>Projects</span></h2>
+        <p>Some of my work</p>
+    </div>
+
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <div class="project-icon">
+                🎨
+            </div>
+
+            <h3>
+                Roommates Application
+            </h3>
+
+            <p>
+                Created an end-to-end user experience for a roommate
+                management application, including user flows,
+                wireframes and UI designs.
+            </p>
+
+            <div class="tech">
+                <span>UI/UX</span>
+                <span>Figma</span>
+                <span>Wireframing</span>
+                <span>Prototyping</span>
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-icon">
+                📱
+            </div>
+
+            <h3>
+                Nutrition Analysing Application
+            </h3>
+
+            <p>
+                Developed an Android application using Flutter focused
+                on tracking and analysing nutritional intake.
+            </p>
+
+            <div class="tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Android</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTERNSHIP ================= -->
+
+<section id="internship">
+
+    <div class="title">
+        <h2>My <span>Internships</span></h2>
+        <p>Professional experience</p>
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>
+                Flutter Development Intern
+            </h3>
+
+            <div class="date">
+                Notasco Technologies
+            </div>
+
+            <p>
+                Developed a Flutter-based Nutrition Analysing Application
+                focused on nutrition tracking and analysis.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                UI/UX Design Intern
+            </h3>
+
+            <div class="date">
+                Osiz Technology | Dec 2025 - May 2026
+            </div>
+
+            <p>
+                Worked on UI/UX design activities and created user flows,
+                wireframes and interface designs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section id="certificates">
+
+    <div class="title">
+        <h2>My <span>Certificates</span></h2>
+        <p>Learning and certifications</p>
+    </div>
+
+
+    <div class="certificate-list">
+
+        <div class="certificate">
+            <h3>Introduction to Modern AI</h3>
+            <p>Cisco</p>
+        </div>
+
+        <div class="certificate">
+            <h3>Apply AI: Analyze Customer Reviews</h3>
+            <p>Cisco</p>
+        </div>
+
+        <div class="certificate">
+            <h3>Java Foundation Certification</h3>
+            <p>Infosys</p>
+        </div>
+
+        <div class="certificate">
+            <h3>Programming Fundamentals using Python</h3>
+            <p>Infosys</p>
+        </div>
+
+        <div class="certificate">
+            <h3>Agentic AI</h3>
+            <p>Dot.com Infoway — Value Added Course</p>
+        </div>
+
+        <div class="certificate">
+            <h3>Basic Python</h3>
+            <p>Paruvaththei Payir Sei</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+
+    <div class="title">
+        <h2>My <span>Achievements</span></h2>
+        <p>Activities and participation</p>
+    </div>
+
+
+    <div class="achievement-list">
+
+        <div class="achievement">
+            🏆 Participated in Symposium held at RAMCO College
+            and presented innovative ideas.
+        </div>
+
+        <div class="achievement">
+            🏆 Participated in Symposium held at K.L.N College
+            and presented innovative ideas.
+        </div>
+
+        <div class="achievement">
+            💡 Actively participated in various workshops to enhance
+            technical and soft skills.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="contact-box">
+
+        <h2>
+            Let's Connect
+        </h2>
+
+        <p>
+            Interested in UI/UX Design and Front-End Development?
+        </p>
+
+        <p>
+            📧 namrithayazhini007@gmail.com
+        </p>
+
+        <p>
+            📱 +91 6379576277
+        </p>
+
+
+        <div class="socials">
+
+            <a
+                href="https://github.com/namrithayazhini"
+                target="_blank">
+                GitHub
+            </a>
+
+            <a
+                href="https://linkedin.com/in/namritha-yazhini-sonaimuthu"
+                target="_blank">
+                LinkedIn
+            </a>
+
+            <a
+                href="https://leetcode.com/u/namrithayazhini007"
+                target="_blank">
+                LeetCode
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Namritha Yazhini S | Portfolio
+    </p>
+
+</footer>
+
+
+<!-- ================= TOP BUTTON ================= -->
+
+<button id="topBtn" onclick="goTop()">
+    ↑
+</button>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("nav");
+
+    nav.classList.toggle("active");
+
+}
+
+
+document.querySelectorAll("nav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document.getElementById("nav").classList.remove("active");
+
+    });
+
+});
+
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 300) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+});
+
+
+function goTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
