@@ -1,0 +1,94 @@
+Index.html: 
+<!DOCTTYPE html> 
+<html> 
+    <head> 
+        <title>Hidden form Field </title> 
+    </head> 
+    <body> 
+        <h2>Section Tracking =- Hidden form field </h2> 
+        <form action="HiddenFieldServlet" method="post"> 
+        Enter Name: 
+        <input type="text" name="username" required> 
+        <br><br> 
+        <input type="submit" value="Submit"> 
+        </form> 
+    </body> 
+</html> 
+ 
+HiddenFieldServlet: 
+@Override 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException { 
+        //processRequest(request, response); 
+        String username = request.getParameter("username"); 
+        response.setContentType("text/html"); 
+        out.println("<hmtl>"); 
+        out.println("<head>"); 
+        out.println("<title>Hidden Form Feild </title>"); 
+        out.println("</head>"); 
+        out.println("<body>"); 
+        out.println("<h2>welcome" + username + "<h2>"); 
+        out.println("<p>Session information is begin" + "maintained using a 
+HiddenFormField</p>"); 
+        out.println("<form action='HiddenFeildServlet' " + "method= 'post'>"); 
+        out.println("<input type='hidden' + name='username'  + value'"+ username + "'> "); 
+         
+    } 
+ Index.html: 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>URL Rewriting</title> 
+</head> 
+<body> 
+<h2>Session Tracking - URL Rewriting</h2> 
+<form action="URLRewriteServlet" method="post"> 
+Enter Your Name: 
+<input type="text" name="username" required> 
+<br><br> 
+<input type="submit" value="Submit"> 
+</form> 
+</body> 
+</html 
+URLRewriteServlet.java 
+@Override 
+protected void doPost(HttpServletRequest request, 
+HttpServletResponse response) 
+throws ServletException, IOException { 
+String username = request.getParameter("username"); 
+response.setContentType("text/html"); 
+PrintWriter out = response.getWriter(); 
+out.println("<html>"); 
+out.println("<head>"); 
+out.println("<title>URL Rewriting</title>"); 
+out.println("</head>"); 
+out.println("<body>"); 
+out.println("<h2>Welcome " + username + "</h2>"); 
+out.println("<p>Session information is being " + "maintained using URL Rewriting.</p>"); 
+String url = "URLRewriteServlet?username=" + username; 
+out.println("<a href='" + url + "'>"); 
+out.println("Continue Using URL Rewriting"); 
+out.println("</a>"); 
+out.println("</body>"); 
+out.println("</html>"); 
+} 
+@Override 
+protected void doGet(HttpServletRequest request, 
+HttpServletResponse response) 
+throws ServletException, IOException { 
+String username = request.getParameter("username"); 
+response.setContentType("text/html"); 
+PrintWriter out = response.getWriter(); 
+out.println("<html>"); 
+out.println("<head>"); 
+out.println("<title>URL Rewriting</title>"); 
+out.println("</head>"); 
+out.println("<body>"); 
+out.println("<h2>Welcome " + username + "</h2>"); 
+out.println("<p>"); 
+out.println("Session information maintained " + "using URL Rewriting."); 
+out.println("</p>"); 
+out.println("</body>"); 
+out.println("</html>"); 
+} 
+}
