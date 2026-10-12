@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        .question h3 {
+            color: #222;
+        }
+        .option {
+            margin: 10px 0;
+        }
+        .submit-btn {
+            display: block;
+            margin: 30px auto 10px;
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Online Examination</h1>
+    <form action="exam" method="post">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What does HTML stand for?</h3>
+            <div class="option">
+                <input type="radio" name="q1"
+                       value="Hyper Text Markup Language">
+                Hyper Text Markup Language
+            </div>
+            <div class="option">
+                <input type="radio" name="q1"
+                       value="High Text Machine Language">
+                High Text Machine Language
+            </div>
+            <div class="option">
+                <input type="radio" name="q1"
+                       value="Hyperlinks Text Mark Language">
+                Hyperlinks Text Mark Language
+            </div>
+            <div class="option">
+                <input type="radio" name="q1"
+                       value="Home Tool Markup Language">
+                Home Tool Markup Language
+            </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which HTML tag is used for the largest heading?</h3>
+
+            <div class="option">
+                <input type="radio" name="q2" value="h6">
+                &lt;h6&gt;
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="h1">
+                &lt;h1&gt;
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="heading">
+                &lt;heading&gt;
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="head">
+                &lt;head&gt;
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Which CSS property is used to change the text color?</h3>
+
+            <div class="option">
+                <input type="radio" name="q3" value="font-color">
+                font-color
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="text-color">
+                text-color
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="color">
+                color
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q3" value="font">
+                font
+            </div>
+        </div>
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Which CSS property is used to change the background color?</h3>
+
+            <div class="option">
+                <input type="radio" name="q4" value="background-color">
+                background-color
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="bgcolor">
+                bgcolor
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="background">
+                background
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="color">
+                color
+            </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Which keyword is used to declare an integer variable in Java?</h3>
+
+            <div class="option">
+                <input type="radio" name="q5" value="var">
+                var
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q5" value="variable">
+                variable
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q5" value="int">
+                int
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q5" value="declare">
+                declare
+            </div>
+        </div>
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. Which of the following is not a primitive data type in Java?</h3>
+
+            <div class="option">
+                <input type="radio" name="q6" value="int">
+                int
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q6" value="float">
+                float
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q6" value="String">
+                String
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q6" value="char">
+                char
+            </div>
+        </div>
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Which keyword is used to stop a loop in Java?</h3>
+
+            <div class="option">
+                <input type="radio" name="q7" value="stop">
+                stop
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="exit">
+                exit
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="break">
+                break
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="end">
+                end
+            </div>
+        </div>
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Which keyword indicates that a Java method does not return a value?</h3>
+
+            <div class="option">
+                <input type="radio" name="q8" value="method">
+                method
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q8" value="function">
+                function
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q8" value="void">
+                void
+            </div>
+            <div class="option">
+                <input type="radio" name="q8" value="define">
+                define
+            </div>
+        </div>
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Which language is primarily used to make web pages interactive?</h3>
+
+            <div class="option">
+                <input type="radio" name="q9" value="HTML">
+                HTML
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q9" value="CSS">
+                CSS
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q9" value="JavaScript">
+                JavaScript
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q9" value="SQL">
+                SQL
+            </div>
+        </div>
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. Which symbol is used for a single-line comment in Java?</h3>
+
+            <div class="option">
+                <input type="radio" name="q10" value="#">
+                #
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q10" value="//">
+                //
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q10" value="--">
+                --
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q10" value="%%">
+                %%
+            </div>
+        </div>
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Which SQL command is used to retrieve data from a database?</h3>
+
+            <div class="option">
+                <input type="radio" name="q11" value="GET">
+                GET
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q11" value="SELECT">
+                SELECT
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q11" value="FETCH">
+                FETCH
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q11" value="READ">
+                READ
+            </div>
+        </div>
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. Which SQL command is used to add new data to a table?</h3>
+
+            <div class="option">
+                <input type="radio" name="q12" value="ADD">
+                ADD
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q12" value="INSERT">
+                INSERT
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q12" value="CREATE">
+                CREATE
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q12" value="UPDATE">
+                UPDATE
+            </div>
+        </div>
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Which Java collection stores elements in key-value pairs?</h3>
+
+            <div class="option">
+                <input type="radio" name="q13" value="ArrayList">
+                ArrayList
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q13" value="HashSet">
+                HashSet
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q13" value="HashMap">
+                HashMap
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q13" value="LinkedList">
+                LinkedList
+            </div>
+        </div>
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. Which HTML attribute specifies the URL of a link?</h3>
+
+            <div class="option">
+                <input type="radio" name="q14" value="src">
+                src
+            </div>
+
+            <div class="option">
+                <input type="radio" name="q14" value="href">
+                href
+            </div>
+            <div class="option">
+                <input type="radio" name="q14" value="link">
+                link
+            </div>
+            <div class="option">
+                <input type="radio" name="q14" value="url">
+                url
+            </div>
+        </div>
+        <div class="question">
+            <h3>15. Which component handles HTTP requests in a Java web application?</h3>
+            <div class="option">
+                <input type="radio" name="q15" value="JFrame">
+                JFrame
+            </div>
+            <div class="option">
+                <input type="radio" name="q15" value="Servlet">
+                Servlet
+            </div>
+            <div class="option">
+                <input type="radio" name="q15" value="Scanner">
+                Scanner
+            </div>
+            <div class="option">
+                <input type="radio" name="q15" value="Thread">
+                Thread
+            </div>
+        </div>
+        <input type="submit" value="Submit Exam" class="submit-btn">
+    </form>
+</div>
+</body>
+</html>
+
+package com.ExamServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/exam")
+public class ExamServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
+            throws ServletException, IOException {
+
+        int score = 0;
+
+        String[] userAnswers = new String[15];
+
+        for (int i = 0; i < 15; i++) {
+
+            userAnswers[i] =
+                    request.getParameter("q" + (i + 1));
+
+            if (userAnswers[i] == null) {
+                userAnswers[i] = "Not Answered";
+            }
+        }
+
+        String[] correctAnswers = {
+
+            "Hyper Text Markup Language",
+            "h1",
+            "color",
+            "background-color",
+            "int",
+            "String",
+            "break",
+            "void",
+            "JavaScript",
+            "//",
+            "SELECT",
+            "INSERT",
+            "HashMap",
+            "href",
+            "Servlet"
+        };
+
+        for (int i = 0; i < 15; i++) {
+
+            if (correctAnswers[i].equals(userAnswers[i])) {
+                score++;
+            }
+        }
+
+        double percentage = (score / 15.0) * 100;
+
+        response.setContentType("text/html");
+
+        PrintWriter out = response.getWriter();
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Exam Result</title>");
+
+        out.println("<style>");
+
+        out.println("body {");
+        out.println("font-family: Arial;");
+        out.println("background-color: #f2f2f2;");
+        out.println("padding: 30px;");
+        out.println("}");
+
+        out.println(".container {");
+        out.println("width: 80%;");
+        out.println("margin: auto;");
+        out.println("background-color: white;");
+        out.println("padding: 30px;");
+        out.println("border-radius: 10px;");
+        out.println("}");
+
+        out.println(".score {");
+        out.println("text-align: center;");
+        out.println("background-color: #e8f5e9;");
+        out.println("padding: 20px;");
+        out.println("}");
+
+        out.println(".question {");
+        out.println("border: 1px solid #ddd;");
+        out.println("padding: 15px;");
+        out.println("margin-bottom: 15px;");
+        out.println("}");
+
+        out.println(".correct {");
+        out.println("color: green;");
+        out.println("font-weight: bold;");
+        out.println("}");
+
+        out.println(".wrong {");
+        out.println("color: red;");
+        out.println("font-weight: bold;");
+        out.println("}");
+
+        out.println(".button {");
+        out.println("display: inline-block;");
+        out.println("padding: 12px 20px;");
+        out.println("background-color: #007bff;");
+        out.println("color: white;");
+        out.println("text-decoration: none;");
+        out.println("border-radius: 5px;");
+        out.println("}");
+
+        out.println("</style>");
+        out.println("</head>");
+
+        out.println("<body>");
+
+        out.println("<div class='container'>");
+
+        out.println("<h1>Exam Result</h1>");
+
+        out.println("<div class='score'>");
+
+        out.println("<h2>Your Score: "
+                + score + " / 15</h2>");
+
+        out.println("<h3>Percentage: "
+                + String.format("%.2f", percentage)
+                + "%</h3>");
+
+        if (score >= 13) {
+
+            out.println("<h3 style='color:green;'>Excellent!</h3>");
+
+        } else if (score >= 9) {
+
+            out.println("<h3 style='color:orange;'>Good Job!</h3>");
+
+        } else {
+
+            out.println("<h3 style='color:red;'>Try Again!</h3>");
+        }
+
+        out.println("</div>");
+
+        out.println("<h2>Answer Review</h2>");
+
+        for (int i = 0; i < 15; i++) {
+
+            out.println("<div class='question'>");
+
+            out.println("<h3>Question " + (i + 1) + "</h3>");
+
+            out.println("<p>");
+            out.println("<b>Your Answer:</b> "
+                    + userAnswers[i]);
+            out.println("</p>");
+
+            out.println("<p>");
+            out.println("<b>Correct Answer:</b> "
+                    + correctAnswers[i]);
+            out.println("</p>");
+
+            if (correctAnswers[i].equals(userAnswers[i])) {
+
+                out.println("<p class='correct'>Correct ✓</p>");
+
+            } else {
+
+                out.println("<p class='wrong'>Wrong ✗</p>");
+            }
+
+            out.println("</div>");
+        }
+
+        out.println("<br>");
+
+        out.println("<a class='button' href='index.html'>");
+        out.println("Take Exam Again");
+        out.println("</a>");
+
+        out.println("</div>");
+
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
