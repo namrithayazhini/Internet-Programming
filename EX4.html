@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal Registration Form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f2f2f2;
+        }
+
+        .container{
+            width:450px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input, select{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        .btn{
+            background:#007bff;
+            color:white;
+            border:none;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+        body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 450px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+h2{
+    text-align: center;
+    color: #333;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+.btn:hover{
+    background-color: #0056b3;
+}
+    </style>
+    <script>
+        function validateForm()
+        {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var qualification =
+                document.getElementById("qualification").value;
+            var password =
+                document.getElementById("password").value;
+            var confirmPassword =
+                document.getElementById("confirmPassword").value;
+            if(name=="")
+            {
+                alert("Name is mandatory");
+                return false;
+            }
+            var emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(!emailPattern.test(email))
+            {
+                alert("Enter a valid Email Address");
+                return false;
+            }
+            var phonePattern = /^[0-9]{10}$/;
+            if(!phonePattern.test(phone))
+            {
+                alert("Enter a valid 10-digit Phone Number");
+                return false
+            if(qualification=="")
+            {
+                alert("Qualification is mandatory");
+                return false;
+            }
+            if(password.length < 6)
+            {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+            if(password != confirmPassword)
+            {
+                alert("Passwords do not match");
+                return false;
+            }
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Job Seeker Registration</h2>
+    <form onsubmit="return validateForm()">
+        <label>Full Name *</label>
+        <input type="text" id="name">
+
+        <label>Email *</label>
+        <input type="text" id="email">
+        <label>Phone Number *</label>
+        <input type="text" id="phone">
+        <label>Qualification *</label>
+        <select id="qualification">
+            <option value="">Select Qualification</option>
+            <option>B.E/B.Tech</option>
+            <option>M.E/M.Tech</option>
+            <option>MCA</option>
+            <option>B.Sc</option>
+            <option>M.Sc</option>
+        </select>
+        <label>Password *</label>
+        <input type="password" id="password">
+        <label>Confirm Password *</label>
+        <input type="password" id="confirmPassword">
+        <input type="submit" value="Register" class="btn">
+    </form>
+</div>
+</body>
+</html>
