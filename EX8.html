@@ -1,0 +1,64 @@
+Index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form action="process.jsp" method="post">
+        User Name:
+        <input type="text" name="username" required>
+        <br><br>
+        Password:
+        <input type="password" name="password" required>
+        <br><br>
+        Name:
+        <input type="text" name="name" required>
+        <br><br>
+        Credit Card Number:
+        <input type="text" name="creditcard" required>
+        <br><br>
+        Email:
+        <input type="email" name="email" required>
+        <br><br>
+        Phone Number:
+        <input type="text" name="phone" required>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
+
+
+Process .jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Details</title>
+</head>
+<body>
+    <h2>User Registration Details</h2>
+
+    <%
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String name = request.getParameter("name");
+        String creditcard = request.getParameter("creditcard");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+    %>
+
+    <p><b>User Name:</b> <%= username %></p>
+    <p><b>Password:</b> <%= password %></p>
+    <p><b>Name:</b> <%= name %></p>
+    <p><b>Credit Card Number:</b> <%= creditcard %></p>
+    <p><b>Email:</b> <%= email %></p>
+    <p><b>Phone Number:</b> <%= phone %></p>
+</body>
+</html>
+
